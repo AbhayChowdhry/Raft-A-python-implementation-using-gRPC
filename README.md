@@ -2,7 +2,7 @@
 Implemented a modification with leader-lease 
 
 
-### Leader Lease
+## Leader Lease
 
 It is possible to rely on a time-based “lease” for Raft leadership that gets propagated through the heartbeat mechanism. And if we have well-behaved clocks, we can obtain linearizable reads without paying a round-trip latency penalty. This is achieved using the concept of Leases.
 
@@ -26,7 +26,7 @@ The leader also propagates the end time of the acquired lease in its heartbeat. 
 During a leader election, a voter must propagate the old leader’s lease timeout known to that voter to the new candidate it is voting for. Upon receiving a majority of votes, the new leader must wait out the longest old leader’s lease duration before acquiring its lease. The old leader steps down and no longer functions as a leader upon the expiry of its leader lease.
 
 
-### Edge Cases taken care of
+## Edge Cases handled
 
 0. Start the cluster with 5 nodes. Wait for the leader to be elected and a NO-OP entry to be appended in all the logs.
 
