@@ -1,6 +1,6 @@
 # Raft-A-python-implementation-using-gRPC
-Implemented a modification with leader-lease 
 
+Followed the pseudo code provided [here](https://www.cl.cam.ac.uk/teaching/2122/ConcDisSys/dist-sys-notes.pdf) with a modification with leader-lease 
 
 ## Leader Lease
 
